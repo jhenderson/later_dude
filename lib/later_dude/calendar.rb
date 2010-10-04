@@ -20,7 +20,7 @@ module LaterDude
     end
 
     def to_html
-      content_tag(:table, :class => "#{@options[:calendar_class]}") do
+      content_tag(:table, :class => "#{@options[:calendar_class]}", :id => "#{@options[:calendar_id]}") do
         content_tag(:tbody, show_days)+ content_tag(:thead, "#{show_month_names}#{show_day_names}".html_safe)
       end
     end
